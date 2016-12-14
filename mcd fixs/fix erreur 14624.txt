@@ -1,0 +1,380 @@
+-09/10/2016 22:46:56
+|- GÉNÉRATION XML DE LA DPEC: 564964/2016|-  ID_DEMANDE_PEC: 720637
+|- ============================================================
+|- API_STAGE_ID: 1107257
+|-  id_stagiaire: 846898
+
+-09/10/2016 22:46:47
+|- GÉNÉRATION XML DE LA DPEC: 563524/2016|-  ID_DEMANDE_PEC: 718544
+|- ============================================================
+|- API_STAGE_ID: 1105534
+|-  id_stagiaire: 844451
+|-  id_stagiaire: 844452
+|-  id_stagiaire: 844453
+|-  id_stagiaire: 844454
+|-  id_stagiaire: 844455
+|-  id_stagiaire: 844456
+|-  id_stagiaire: 844457
+|-  id_stagiaire: 844458
+|-  id_stagiaire: 844459
+|-  id_stagiaire: 844460
+|-  id_stagiaire: 844461
+
+
+================================================================================================================
+
+
+-20/09/2016 12:32:00
+|- GÉNÉRATION XML DE LA DPEC: 557827/2016 |-  ID_DEMANDE_PEC: 708803
+EXTRANET N°:557827 BETHUEL Corinne - hemtrol@eurocelldiag.com - 0299352716
+|- ============================================================
+|- API_STAGE_ID: 1096479
+|-  id_stagiaire: 834579
+|-  id_stagiaire: 834580
+|-  id_stagiaire: 834581
+|-  id_stagiaire: 834582
+
+
+-20/09/2016 12:54:32
+|- GÉNÉRATION XML DE LA DPEC: 553240/2016|-  ID_DEMANDE_PEC: 699832
+EXTRANET N°:553240 PATISSIER-GAUTHIER Sylvia - sylvia.patissier-gauthier@copelia.fr - 0492026196
+|- ============================================================
+|- API_STAGE_ID: 1088393
+|-  id_stagiaire: 827268
+
+UPDATE `comptesnumeriques`.`stagiaire` 
+SET `nb_heures_plan` = '0.1' 
+WHERE `stagiaire`.`stagiaire_id` 
+in
+(
+'834579',
+'834580',
+'834581',
+'834582',
+'827268'
+)
+
+-20/09/2016 13:00:56
+|- GÉNÉRATION XML DE LA DPEC: 553607/2016|-  ID_DEMANDE_PEC: 700607
+EXTRANET N°:553607 ZIEHL Elodie - elodie.ziehl@smurfitkappa.fr - 0326557010
+|- ============================================================
+|- API_STAGE_ID: 1089083
+|-  id_stagiaire: 827781
+|-  id_stagiaire: 827782
+|-  id_stagiaire: 827783
+|-  id_stagiaire: 827784
+|-  id_stagiaire: 827785
+|-  id_stagiaire: 827786
+|-  id_stagiaire: 827787
+|-  id_stagiaire: 827788
+|-  id_stagiaire: 827789
+|-  id_stagiaire: 827790
+|-  id_stagiaire: 827791
+|-  id_stagiaire: 827792
+|-  id_stagiaire: 827793
+|-  id_stagiaire: 827794
+|-  id_stagiaire: 827795
+|-  id_stagiaire: 827796
+|-  id_stagiaire: 827797
+|-  id_stagiaire: 827798
+|-  id_stagiaire: 827799
+|-  id_stagiaire: 827800
+|-  id_stagiaire: 827801
+|-  id_stagiaire: 827802
+|-  id_stagiaire: 827803
+|-  id_stagiaire: 827804
+|-  id_stagiaire: 827805
+|-  id_stagiaire: 827806
+|-  id_stagiaire: 827807
+|-  id_stagiaire: 827808
+|-  id_stagiaire: 827809
+|-  id_stagiaire: 827810
+|-  id_stagiaire: 827811
+|-  id_stagiaire: 827812
+|-  id_stagiaire: 827813
+|-  id_stagiaire: 827814
+|-  id_stagiaire: 827815
+|-  id_stagiaire: 827816
+|-  id_stagiaire: 827817
+|-  id_stagiaire: 827818
+|-  id_stagiaire: 827819
+|-  id_stagiaire: 827820
+|-  id_stagiaire: 827821
+|-  id_stagiaire: 827822
+|-  id_stagiaire: 827823
+|-  id_stagiaire: 827824
+|-  id_stagiaire: 827825
+|-  id_stagiaire: 827826
+|-  id_stagiaire: 828079
+|-  id_stagiaire: 828080
+|-  id_stagiaire: 828081
+|-  id_stagiaire: 828082
+|-  id_stagiaire: 828083
+|-  id_stagiaire: 828084
+|-  id_stagiaire: 828085
+|-  id_stagiaire: 828086
+|-  id_stagiaire: 828088
+|-  id_stagiaire: 828089
+|-  id_stagiaire: 828090
+|-  id_stagiaire: 828091
+|-  id_stagiaire: 828092
+|-  id_stagiaire: 828093
+|-  id_stagiaire: 828094
+|-  id_stagiaire: 828095
+|-  id_stagiaire: 828096
+|-  id_stagiaire: 828097
+|-  id_stagiaire: 828098
+|-  id_stagiaire: 828099
+|-  id_stagiaire: 828100
+|-  id_stagiaire: 828101
+|-  id_stagiaire: 828102
+|-  id_stagiaire: 828103
+|-  id_stagiaire: 828104
+|-  id_stagiaire: 828105
+|-  id_stagiaire: 828106
+|-  id_stagiaire: 828107
+|-  id_stagiaire: 828108
+|-  id_stagiaire: 828109
+|-  id_stagiaire: 828110
+|-  id_stagiaire: 828111
+|-  id_stagiaire: 828112
+|-  id_stagiaire: 828113
+
+UPDATE `comptesnumeriques`.`stagiaire` 
+SET `nb_heures_plan` = '3.5' 
+WHERE `stagiaire`.`stagiaire_id` 
+in
+(
+'827782',
+'827783',
+'827784',
+'827785',
+'827786',
+'827787',
+'827788',
+'827789',
+'827790',
+'827791',
+'827792',
+'827793',
+'827794',
+'827795',
+'827796',
+'827797',
+'827798',
+'827799',
+'827800',
+'827801',
+'827802',
+'827803',
+'827804',
+'827805',
+'827806',
+'827807',
+'827808',
+'827809',
+'827810',
+'827811',
+'827812',
+'827813',
+'827814',
+'827815',
+'827816',
+'827817',
+'827818',
+'827819',
+'827820',
+'827821',
+'827822',
+'827823',
+'827824',
+'827825',
+'827826',
+'828079',
+'828080',
+'828081',
+'828082',
+'828083',
+'828084',
+'828085',
+'828086',
+'828088',
+'828089',
+'828090',
+'828091',
+'828092',
+'828093',
+'828094',
+'828095',
+'828096',
+'828097',
+'828098',
+'828099',
+'828100',
+'828101',
+'828102',
+'828103',
+'828104',
+'828105',
+'828106',
+'828107',
+'828108',
+'828109',
+'828110',
+'828111',
+'828112',
+'828113'
+)
+
+
+
+
+
+
+-21/09/2016 10:57:54
+|- GÉNÉRATION XML DE LA DPEC: 557022/2016|-  ID_DEMANDE_PEC: 707185
+EXTRANET N°:557022 POIRRIER Christelle - c.poirrier@soparco.com - 0233733074
+|- ============================================================
+|- API_STAGE_ID: 1094859
+|-  id_stagiaire: 833088
+
+UPDATE `comptesnumeriques`.`stagiaire` 
+SET `nb_heures_plan` = '14' 
+WHERE `stagiaire`.`stagiaire_id` 
+in
+('833088')
+
+-21/09/2016 11:09:53
+|- GÉNÉRATION XML DE LA DPEC: 559537/2016|-  ID_DEMANDE_PEC: 711698
+EXTRANET N°:559537 SHARP Sophie - sophie.sharp@smith-nephew.com - 0243832326
+|- ============================================================
+|- API_STAGE_ID: 1099306
+|-  id_stagiaire: 837709
+|-  id_stagiaire: 837710
+|-  id_stagiaire: 837711
+|-  id_stagiaire: 837712
+|-  id_stagiaire: 837713
+|-  id_stagiaire: 837714
+|-  id_stagiaire: 837715
+|-  id_stagiaire: 837716
+|-  id_stagiaire: 837717
+
+UPDATE `comptesnumeriques`.`stagiaire` 
+SET `nb_heures_plan` = '1' 
+WHERE `stagiaire`.`stagiaire_id` 
+in
+(
+'837709',
+'837710',
+'837711',
+'837712',
+'837713',
+'837714',
+'837715',
+'837716',
+'837717'
+)
+
+-21/09/2016 11:14:05
+|- GÉNÉRATION XML DE LA DPEC: 559660/2016|-  ID_DEMANDE_PEC: 711863
+EXTRANET N°:559660 Extranet Administrateur - clement.lepicard@fr.nufarm.com - 0000000000
+|- ============================================================
+|- API_STAGE_ID: 1099418
+|-  id_stagiaire: 838108
+|-  id_stagiaire: 838109
+|-  id_stagiaire: 838110
+|-  id_stagiaire: 838111
+|-  id_stagiaire: 838119
+
+UPDATE `comptesnumeriques`.`stagiaire` 
+SET `nb_heures_plan` = '11' 
+WHERE `stagiaire`.`stagiaire_id` 
+in
+(
+'838108',
+'838109',
+'838110',
+'838111',
+'838119'
+)
+
+-21/09/2016 11:23:40
+|- GÉNÉRATION XML DE LA DPEC: 551846/2016|-  ID_DEMANDE_PEC: 697085
+EXTRANET N°:551846 COURTINE Jéssica - jessica.courtine@capsugel.com - 0297721492
+|- ============================================================
+|- API_STAGE_ID: 1085954
+|-  id_stagiaire: 824874
+|-  id_stagiaire: 824875
+|-  id_stagiaire: 824876
+|-  id_stagiaire: 824877
+|-  id_stagiaire: 824878
+|-  id_stagiaire: 824879
+|-  id_stagiaire: 824880
+|-  id_stagiaire: 824881
+|-  id_stagiaire: 824882
+|-  id_stagiaire: 824883
+|-  id_stagiaire: 824884
+|-  id_stagiaire: 824885
+|-  id_stagiaire: 824886
+|-  id_stagiaire: 824887
+|-  id_stagiaire: 824888
+|-  id_stagiaire: 824889
+|-  id_stagiaire: 824890
+|-  id_stagiaire: 824891
+|-  id_stagiaire: 824892
+|-  id_stagiaire: 824893
+|-  id_stagiaire: 824894
+|-  id_stagiaire: 824895
+|-  id_stagiaire: 824896
+|-  id_stagiaire: 824897
+|-  id_stagiaire: 824898
+|-  id_stagiaire: 824899
+|-  id_stagiaire: 824900
+|-  id_stagiaire: 824901
+|-  id_stagiaire: 824902
+|-  id_stagiaire: 824903
+|-  id_stagiaire: 824904
+|-  id_stagiaire: 824905
+|-  id_stagiaire: 824906
+|-  id_stagiaire: 824907
+
+UPDATE `comptesnumeriques`.`stagiaire` 
+SET `nb_heures_plan` = '0.1' 
+WHERE `stagiaire`.`stagiaire_id` 
+in
+(
+'824874',
+'824875',
+'824876',
+'824877',
+'824878',
+'824879',
+'824880',
+'824881',
+'824882',
+'824883',
+'824884',
+'824885',
+'824886',
+'824887',
+'824888',
+'824889',
+'824890',
+'824891',
+'824892',
+'824893',
+'824894',
+'824895',
+'824896',
+'824897',
+'824898',
+'824899',
+'824900',
+'824901',
+'824902',
+'824903',
+'824904',
+'824905',
+'824906',
+'824907'
+)

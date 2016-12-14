@@ -1,0 +1,28 @@
+http://www.sadanduseless.com/
+fiddler telerik
+
+declare @i integer,
+		@Siret varchar(14),
+		@SiretList varchar (500)
+		
+DECLARE	@Sirets TABLE(siret varchar(14))
+
+insert into @Sirets values ('33941996200206'), ('49764153000025')
+		
+DECLARE cu_etablissement CURSOR FOR select * from @Sirets
+	
+OPEN cu_etablissement 
+FETCH cu_etablissement INTO @Siret
+
+set @i = 0
+
+WHILE (@@fetch_status <> -1)
+BEGIN
+	set @i = @i + 1
+	FETCH cu_etablissement INTO @Siret
+END
+
+CLOSE cu_etablissement 
+DEALLOCATE cu_etablissement 
+
+select @i
