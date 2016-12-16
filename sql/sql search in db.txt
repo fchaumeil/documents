@@ -13,4 +13,15 @@ select * from sys.objects o
 inner join sys.views v on v.object_id = o.object_id
 where v.name like '%VUE_SYNCHRO_CN%'
 
+select * from sys.objects o
+inner join sys.views v on v.object_id = o.object_id
+inner join sys.sql_modules m on m.object_id = v.object_id
+where v.name like '%VUE_SYNCHRO_CN%'
+and m.definition like '%'''' as type%'
+
 https://www.laptopscreen.com/French/screen-part-number/N140BGE-LB2~REV.A1/?set_currency=EUR
+
+
+
+
+
