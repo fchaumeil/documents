@@ -1,0 +1,44 @@
+\\domdefi.fr\Partages\Editique\Pieces
+
+ générer json document depuis requete ci dessous
+ remplacer " par \"
+ remplacer @ par rien
+ 
+ l'insérer dans l'appel de generateEnumerableFromJson dans recupDocCPRO() de downlinksynchronizationPro.cs
+
+ SELECT 
+concat('@',CAST(`demande_pec_object`.`numero_final` as char),'@') as numero_final, 
+concat('@',CAST(`document_stage`.`document_id` as char),'@') as documentId, 
+concat('@',CAST(`demande_pec_object`.`demande_pec_object_id` as char),'@') as ID_STAGE_EXTRANET, 
+concat('@',cast(`document_stage`.`document_stage_Id` as char),'@') as API_DOC_STAGE_ID, 
+`document`.`document` as MIME_PIECE,
+`document`.`type` as COD_TYPE_PIECE
+FROM `demande_pec_object` 
+inner join `document_stage` on  `document_stage`.`stage_id`=`demande_pec_object`.`demande_pec_object_id`
+inner join `document` on  `document_stage`.`document_id`=`document`.`document_id`
+WHERE `demande_pec_object`.`numero_final` in
+(
+'554771 01/2016',
+'554771 02/2016'
+)
+
+SELECT 
+concat('@',CAST(`demande_pec_object`.`numero_final` as char),'@') as numero_final, 
+concat('@',CAST(`document_contrat_pro`.`document_id` as char),'@') as documentId, 
+concat('@',CAST(`demande_pec_object`.`demande_pec_object_id` as char),'@') as ID_CONTRAT_PRO_EXTRANET, 
+concat('@',cast(`document_contrat_pro`.`document_Contrat_Pro_Id` as char),'@') as API_DOC_CPRO_ID, 
+`document`.`document` as MIME_PIECE,
+`document`.`type` as COD_TYPE_PIECE
+FROM `demande_pec_object` 
+inner join `document_contrat_pro` on  `document_contrat_pro`.`contrat_pro_id`=`demande_pec_object`.`demande_pec_object_id`
+inner join `document` on  `document_contrat_pro`.`document_id`=`document`.`document_id`
+inner join `demande_pec` on `demande_pec_object`.`demande_pec_id` = `demande_pec`.`demande_pec_id`
+WHERE `demande_pec`.`numero` in
+(832785 
+'00825726',
+'00826401', 
+'00826480', 
+'00826734',
+'00830021')
+
+
