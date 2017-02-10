@@ -21,7 +21,3 @@ and m.definition like '%'''' as type%'
 
 https://www.laptopscreen.com/French/screen-part-number/N140BGE-LB2~REV.A1/?set_currency=EUR
 
-
-
-
-
