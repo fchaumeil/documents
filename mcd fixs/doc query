@@ -1,5 +1,0 @@
-SELECT so.*, d.type
-FROM `document_stage` ds
-INNER JOIN sync_optiform so ON so.model_id = ds.document_stage_id AND so.model = 'document_stage'
-INNER JOIN document d ON d.document_id = ds.document_id
-WHERE ds.`stage_id` = 1147280
