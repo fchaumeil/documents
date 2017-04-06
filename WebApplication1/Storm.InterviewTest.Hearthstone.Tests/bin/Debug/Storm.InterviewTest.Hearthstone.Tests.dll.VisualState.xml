@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1024]C:\Users\Administrateur\Desktop\storm-tech-test-master\Storm.InterviewTest.Hearthstone.Tests\bin\Debug\Storm.InterviewTest.Hearthstone.Tests.dll</TopNode>
+  <SelectedNode>[0-1020]Storm.InterviewTest.Hearthstone.Tests.Queries.WhenSearchingHearthstoneCardsWithSpecificQueryTerm</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1024]C:\Users\Administrateur\Desktop\storm-tech-test-master\Storm.InterviewTest.Hearthstone.Tests\bin\Debug\Storm.InterviewTest.Hearthstone.Tests.dll" Expanded="true" />
+    <Node UniqueName="[0-1025]Storm" Expanded="true" />
+    <Node UniqueName="[0-1026]Storm.InterviewTest" Expanded="true" />
+    <Node UniqueName="[0-1027]Storm.InterviewTest.Hearthstone" Expanded="true" />
+    <Node UniqueName="[0-1028]Storm.InterviewTest.Hearthstone.Tests" Expanded="true" />
+    <Node UniqueName="[0-1029]Storm.InterviewTest.Hearthstone.Tests.Mapping" Expanded="true" />
+    <Node UniqueName="[0-1000]Storm.InterviewTest.Hearthstone.Tests.Mapping.WhenMappingHeroCard" Expanded="true" />
+    <Node UniqueName="[0-1002]Storm.InterviewTest.Hearthstone.Tests.Mapping.WhenMappingMinionCard" Expanded="true" />
+    <Node UniqueName="[0-1004]Storm.InterviewTest.Hearthstone.Tests.Mapping.WhenMappingSpellCard" Expanded="true" />
+    <Node UniqueName="[0-1030]Storm.InterviewTest.Hearthstone.Tests.Parsing" Expanded="true" />
+    <Node UniqueName="[0-1016]Storm.InterviewTest.Hearthstone.Tests.Parsing.WhenParsingHearthstoneCard" Expanded="true" />
+    <Node UniqueName="[0-1006]Storm.InterviewTest.Hearthstone.Tests.Parsing.WhenParsingHearthstoneCardArray" Expanded="true" />
+    <Node UniqueName="[0-1031]Storm.InterviewTest.Hearthstone.Tests.Queries" Expanded="true" />
+    <Node UniqueName="[0-1008]Storm.InterviewTest.Hearthstone.Tests.Queries.WhenFindingAllHearthstoneCards" Expanded="true" />
+    <Node UniqueName="[0-1010]Storm.InterviewTest.Hearthstone.Tests.Queries.WhenFindingHearthstoneCardsByQuery" Expanded="true" />
+    <Node UniqueName="[0-1012]Storm.InterviewTest.Hearthstone.Tests.Queries.WhenFindingSpecificCardTypeByIdHearthstoneCards" Expanded="true" />
+    <Node UniqueName="[0-1014]Storm.InterviewTest.Hearthstone.Tests.Queries.WhenFindingSpecificHearthstoneCards" Expanded="true" />
+    <Node UniqueName="[0-1018]Storm.InterviewTest.Hearthstone.Tests.Queries.WhenSearchingHearthstoneCardsWithEmptyQuery" Expanded="true" />
+    <Node UniqueName="[0-1020]Storm.InterviewTest.Hearthstone.Tests.Queries.WhenSearchingHearthstoneCardsWithSpecificQueryTerm" Expanded="true" />
+  </Nodes>
+</VisualState>

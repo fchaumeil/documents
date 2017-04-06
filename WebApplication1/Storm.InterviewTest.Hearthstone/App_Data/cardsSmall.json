@@ -1,0 +1,639 @@
+{
+   "Basic":[
+      {
+         "id":"GAME_004",
+         "name":"AFK",
+         "type":"Enchantment",
+         "text":"Your turns are shorter."
+      },
+      {
+         "id":"HERO_09",
+         "name":"Anduin Wrynn",
+         "type":"Hero",
+         "faction":"Neutral",
+         "rarity":"Free",
+         "health":30,
+         "collectible":true,
+         "playerClass":"Priest"
+      },
+      {
+         "id":"NEW1_010",
+         "name":"Al'Akir the Windlord",
+         "type":"Minion",
+         "rarity":"Legendary",
+         "cost":8,
+         "attack":3,
+         "health":5,
+         "text":"<b>Windfury, Charge, Divine Shield, Taunt</b>",
+         "flavor":"He is the weakest of the four Elemental Lords.  And the other three don't let him forget it.",
+         "artist":"Raymond Swanland",
+         "collectible":true,
+         "elite":true,
+         "playerClass":"Shaman",
+         "mechanics":[
+            "Charge",
+            "Divine Shield",
+            "Taunt",
+            "Windfury"
+         ]
+      },
+      {
+         "id":"EX1_066",
+         "name":"Acidic Swamp Ooze",
+         "type":"Minion",
+         "faction":"Alliance",
+         "rarity":"Common",
+         "cost":2,
+         "attack":3,
+         "health":2,
+         "text":"<b>Battlecry:</b> Destroy your opponent's weapon.",
+         "flavor":"Oozes love Flamenco.  Don't ask.",
+         "artist":"Chris Rahn",
+         "collectible":true,
+         "howToGetGold":"Unlocked at Rogue Level 57.",
+         "mechanics":[
+            "Battlecry"
+         ]
+      },
+      {
+         "id":"NEW1_034",
+         "name":"Huffer",
+         "type":"Minion",
+         "rarity":"Common",
+         "cost":3,
+         "attack":4,
+         "health":2,
+         "text":"<b>Charge</b>",
+         "race":"Beast",
+         "playerClass":"Hunter",
+         "mechanics":[
+            "Charge"
+         ]
+      },
+      {
+         "id":"EX1_360e",
+         "name":"Humility",
+         "type":"Enchantment",
+         "faction":"Neutral",
+         "text":"Attack has been changed to 1.",
+         "playerClass":"Paladin"
+      },
+      {
+         "id":"EX1_360",
+         "name":"Humility",
+         "type":"Spell",
+         "faction":"Neutral",
+         "rarity":"Common",
+         "cost":1,
+         "text":"Change a minion's Attack to 1.",
+         "flavor":"This card makes something really damp.  Oh wait.  That's \"Humidity.\"",
+         "artist":"Daren Bader",
+         "collectible":true,
+         "playerClass":"Paladin",
+         "howToGet":"Unlocked at Level 6.",
+         "howToGetGold":"Unlocked at Level 28."
+      },
+      {
+         "id":"CS2_084e",
+         "name":"Hunter's Mark",
+         "type":"Enchantment",
+         "text":"This minion has 1 Health.",
+         "playerClass":"Hunter"
+      },
+      {
+         "id":"CS2_084",
+         "name":"Hunter's Mark",
+         "type":"Spell",
+         "faction":"Neutral",
+         "rarity":"Common",
+         "cost":0,
+         "text":"Change a minion's Health to 1.",
+         "flavor":"Never play 'Hide and Go Seek' with a Hunter.",
+         "artist":"Jimmy Lo",
+         "collectible":true,
+         "playerClass":"Hunter",
+         "howToGet":"Unlocked at Level 6.",
+         "howToGetGold":"Unlocked at Level 40."
+      },
+      {
+         "id":"EX1_169",
+         "name":"Innervate",
+         "type":"Spell",
+         "faction":"Neutral",
+         "rarity":"Free",
+         "cost":0,
+         "text":"Gain 2 Mana Crystals this turn only.",
+         "flavor":"Some druids still have flashbacks from strangers yelling \"Innervate me!!\" at them.",
+         "artist":"Doug Alexander",
+         "collectible":true,
+         "playerClass":"Druid",
+         "howToGet":"Unlocked at Level 1.",
+         "howToGetGold":"Unlocked at Level 36."
+      },
+      {
+         "id":"CS2_232",
+         "name":"Ironbark Protector",
+         "type":"Minion",
+         "faction":"Neutral",
+         "rarity":"Common",
+         "cost":8,
+         "attack":8,
+         "health":8,
+         "text":"<b>Taunt</b>",
+         "flavor":"I <i>dare</i> you to attack Darnassus.",
+         "artist":"Dave Allsop",
+         "collectible":true,
+         "playerClass":"Druid",
+         "howToGet":"Unlocked at Level 10.",
+         "howToGetGold":"Unlocked at Level 49.",
+         "mechanics":[
+            "Taunt"
+         ]
+      },
+      {
+         "id":"CS2_141",
+         "name":"Ironforge Rifleman",
+         "type":"Minion",
+         "faction":"Alliance",
+         "rarity":"Common",
+         "cost":3,
+         "attack":2,
+         "health":2,
+         "text":"<b>Battlecry:</b> Deal 1 damage.",
+         "flavor":"\"Ready! Aim! Drink!\"",
+         "artist":"Tooth",
+         "collectible":true,
+         "howToGetGold":"Unlocked at Mage Level 55.",
+         "mechanics":[
+            "Battlecry"
+         ]
+      },
+      {
+         "id":"CS2_125",
+         "name":"Ironfur Grizzly",
+         "type":"Minion",
+         "faction":"Neutral",
+         "rarity":"Common",
+         "cost":3,
+         "attack":3,
+         "health":3,
+         "text":"<b>Taunt</b>",
+         "flavor":"\"Bear Carcass 1/10\"",
+         "artist":"Lars Grant-West",
+         "collectible":true,
+         "race":"Beast",
+         "howToGetGold":"Unlocked at Hunter Level 59.",
+         "mechanics":[
+            "Taunt"
+         ]
+      },
+      {
+         "id":"HERO_08",
+         "name":"Jaina Proudmoore",
+         "type":"Hero",
+         "faction":"Neutral",
+         "rarity":"Free",
+         "health":30,
+         "collectible":true,
+         "playerClass":"Mage"
+      },
+      {
+         "id":"EX1_539",
+         "name":"Kill Command",
+         "type":"Spell",
+         "faction":"Neutral",
+         "rarity":"Common",
+         "cost":3,
+         "text":"Deal $3 damage. If you have a Beast, deal $5 damage instead.",
+         "flavor":"\"Kill!\", he commanded.",
+         "artist":"Gabe from Penny Arcade",
+         "collectible":true,
+         "playerClass":"Hunter",
+         "howToGet":"Unlocked at Level 10.",
+         "howToGetGold":"Unlocked at Level 49."
+      },
+      {
+         "id":"CS2_142",
+         "name":"Kobold Geomancer",
+         "type":"Minion",
+         "faction":"Horde",
+         "rarity":"Common",
+         "cost":2,
+         "attack":2,
+         "health":2,
+         "text":"<b>Spell Damage +1</b>",
+         "flavor":"In the old days, Kobolds were the finest candle merchants in the land. Then they got pushed too far...",
+         "artist":"Gabor Szikszai",
+         "collectible":true,
+         "howToGetGold":"Unlocked at Warlock Level 59.",
+         "mechanics":[
+            "Spellpower"
+         ]
+      },
+      {
+         "id":"NEW1_011",
+         "name":"Kor'kron Elite",
+         "type":"Minion",
+         "rarity":"Common",
+         "cost":4,
+         "attack":4,
+         "health":3,
+         "text":"<b>Charge</b>",
+         "flavor":"The Kor'kron are the elite forces of Garrosh Hellscream. Let's just say you don't want to run into these guys while wearing a blue tabard.",
+         "artist":"Alex Horley Orlandelli",
+         "collectible":true,
+         "playerClass":"Warrior",
+         "howToGet":"Unlocked at Level 4.",
+         "howToGetGold":"Unlocked at Level 44.",
+         "mechanics":[
+            "Charge"
+         ]
+      },
+      {
+         "id":"NEW1_033",
+         "name":"Leokk",
+         "type":"Minion",
+         "rarity":"Common",
+         "cost":3,
+         "attack":2,
+         "health":4,
+         "text":"Other friendly minions have +1 Attack.",
+         "race":"Beast",
+         "playerClass":"Hunter"
+      },
+      {
+         "id":"CS1h_001",
+         "name":"Lesser Heal",
+         "type":"Hero Power",
+         "faction":"Neutral",
+         "rarity":"Free",
+         "cost":2,
+         "text":"<b>Hero Power</b>\nRestore 2 Health.",
+         "playerClass":"Priest"
+      },
+      {
+         "id":"CS2_056",
+         "name":"Life Tap",
+         "type":"Hero Power",
+         "faction":"Neutral",
+         "rarity":"Free",
+         "cost":2,
+         "text":"<b>Hero Power</b>\nDraw a card and take 2 damage.",
+         "playerClass":"Warlock"
+      },
+      {
+         "id":"CS2_091",
+         "name":"Light's Justice",
+         "type":"Weapon",
+         "faction":"Neutral",
+         "rarity":"Free",
+         "cost":1,
+         "attack":1,
+         "durability":4,
+         "flavor":"Prince Malchezaar was a collector of rare weapons. He'd animate them and have them dance for him.",
+         "artist":"Glenn Rane",
+         "collectible":true,
+         "playerClass":"Paladin",
+         "howToGet":"Unlocked at Level 1.",
+         "howToGetGold":"Unlocked at Level 36."
+      },
+      {
+         "id":"CS2_162",
+         "name":"Lord of the Arena",
+         "type":"Minion",
+         "faction":"Alliance",
+         "rarity":"Common",
+         "cost":6,
+         "attack":6,
+         "health":5,
+         "text":"<b>Taunt</b>",
+         "flavor":"He used to be a 2100+ rated arena player, but that was years ago and nobody can get him to shut up about it.",
+         "artist":"E.M. Gist",
+         "collectible":true,
+         "howToGetGold":"Unlocked at Priest Level 59.",
+         "mechanics":[
+            "Taunt"
+         ]
+      },
+      {
+         "id":"GAME_001",
+         "name":"Luck of the Coin",
+         "type":"Enchantment",
+         "text":"Going second grants you increased Health."
+      },
+      {
+         "id":"CS2_118",
+         "name":"Magma Rager",
+         "type":"Minion",
+         "rarity":"Free",
+         "cost":3,
+         "attack":5,
+         "health":1,
+         "flavor":"He likes to think he is powerful, but pretty much anyone can solo Molten Core now.",
+         "artist":"Matt Gaser",
+         "collectible":true,
+         "howToGetGold":"Unlocked at Shaman Level 51."
+      },
+      {
+         "id":"HERO_06",
+         "name":"Malfurion Stormrage",
+         "type":"Hero",
+         "faction":"Neutral",
+         "rarity":"Free",
+         "health":30,
+         "collectible":true,
+         "playerClass":"Druid"
+      },
+      {
+         "id":"CS2_009",
+         "name":"Mark of the Wild",
+         "type":"Spell",
+         "faction":"Neutral",
+         "rarity":"Free",
+         "cost":2,
+         "text":"Give a minion <b>Taunt</b> and +2/+2.<i> (+2 Attack/+2 Health)</i>",
+         "flavor":"Not to be confused with Jim of the Wild.",
+         "artist":"Brad Vancata",
+         "collectible":true,
+         "playerClass":"Druid",
+         "howToGet":"Unlocked at Level 1.",
+         "howToGetGold":"Unlocked at Level 28."
+      },
+      {
+         "id":"CS2_009e",
+         "name":"Mark of the Wild",
+         "type":"Enchantment",
+         "text":"This minion has +2/+2 and <b>Taunt</b>.",
+         "playerClass":"Druid"
+      },
+      {
+         "id":"DS1_070o",
+         "name":"Master's Presence",
+         "type":"Enchantment",
+         "text":"+2/+2 and <b>Taunt</b>.",
+         "playerClass":"Hunter"
+      },
+      {
+         "id":"EX1_025t",
+         "name":"Mechanical Dragonling",
+         "type":"Minion",
+         "faction":"Neutral",
+         "rarity":"Common",
+         "cost":1,
+         "attack":2,
+         "health":1,
+         "race":"Mech"
+      },
+      {
+         "id":"CS2_222o",
+         "name":"Might of Stormwind",
+         "type":"Enchantment",
+         "text":"Has +1/+1."
+      },
+      {
+         "id":"DS1_233",
+         "name":"Mind Blast",
+         "type":"Spell",
+         "faction":"Neutral",
+         "rarity":"Free",
+         "cost":2,
+         "text":"Deal $5 damage to the enemy hero.",
+         "flavor":"This spell blasts you directly in the MIND.",
+         "artist":"Dave Allsop",
+         "collectible":true,
+         "playerClass":"Priest",
+         "howToGet":"Unlocked at Level 1.",
+         "howToGetGold":"Unlocked at Level 15."
+      },
+      {
+         "id":"CS1_113",
+         "name":"Mind Control",
+         "type":"Spell",
+         "faction":"Neutral",
+         "rarity":"Common",
+         "cost":10,
+         "text":"Take control of an enemy minion.",
+         "flavor":"Nominated as \"Spell Most Likely to Make Your Opponent Punch the Wall.\"",
+         "artist":"Sean O’Daniels",
+         "collectible":true,
+         "playerClass":"Priest",
+         "howToGet":"Unlocked at Level 10.",
+         "howToGetGold":"Unlocked at Level 49."
+      },
+      {
+         "id":"CS1_113e",
+         "name":"Mind Control",
+         "type":"Enchantment",
+         "faction":"Neutral",
+         "rarity":"Common",
+         "text":"This minion has switched controllers.",
+         "playerClass":"Priest"
+      },
+      {
+         "id":"CS2_003",
+         "name":"Mind Vision",
+         "type":"Spell",
+         "faction":"Neutral",
+         "rarity":"Common",
+         "cost":1,
+         "text":"Put a copy of a random card in your opponent's hand into your hand.",
+         "flavor":"I see what you did there.",
+         "artist":"Michael Komarck",
+         "collectible":true,
+         "playerClass":"Priest",
+         "howToGet":"Unlocked at Level 4.",
+         "howToGetGold":"Unlocked at Level 32."
+      },
+      {
+         "id":"CS2_mirror",
+         "name":"Mirror Image",
+         "type":"Minion",
+         "faction":"Neutral",
+         "rarity":"Common",
+         "cost":0,
+         "attack":0,
+         "health":2,
+         "text":"<b>Taunt</b>",
+         "playerClass":"Mage",
+         "mechanics":[
+            "Taunt"
+         ]
+      },
+      {
+         "id":"CS2_027",
+         "name":"Mirror Image",
+         "type":"Spell",
+         "faction":"Neutral",
+         "rarity":"Common",
+         "cost":1,
+         "text":"Summon two 0/2 minions with <b>Taunt</b>.",
+         "flavor":"Oh hey it's Mirror Image! !egamI rorriM s'ti yeh hO",
+         "artist":"Jim Nelson",
+         "collectible":true,
+         "playerClass":"Mage",
+         "howToGet":"Unlocked at Level 4.",
+         "howToGetGold":"Unlocked at Level 36."
+      },
+      {
+         "id":"NEW1_032",
+         "name":"Misha",
+         "type":"Minion",
+         "rarity":"Common",
+         "cost":3,
+         "attack":4,
+         "health":4,
+         "text":"<b>Taunt</b>",
+         "race":"Beast",
+         "playerClass":"Hunter",
+         "mechanics":[
+            "Taunt"
+         ]
+      },
+      {
+         "id":"EX1_508o",
+         "name":"Mlarggragllabl!",
+         "type":"Enchantment",
+         "text":"This Murloc has +1 Attack."
+      },
+      {
+         "id":"CS2_008",
+         "name":"Moonfire",
+         "type":"Spell",
+         "faction":"Neutral",
+         "rarity":"Common",
+         "cost":0,
+         "text":"Deal $1 damage.",
+         "flavor":"\"Cast Moonfire, and never stop.\" - How to Be a Druid, Chapter 5, Section 3",
+         "artist":"Richard Wright",
+         "collectible":true,
+         "playerClass":"Druid",
+         "howToGet":"Unlocked at Level 6.",
+         "howToGetGold":"Unlocked at Level 40."
+      },
+      {
+         "id":"EX1_302",
+         "name":"Mortal Coil",
+         "type":"Spell",
+         "faction":"Neutral",
+         "rarity":"Common",
+         "cost":1,
+         "text":"Deal $1 damage to a minion. If that kills it, draw a card.",
+         "flavor":"If your spells look like horrifying skulls, let's be honest, you should get to draw some cards.",
+         "artist":"Matt Gaser",
+         "collectible":true,
+         "playerClass":"Warlock",
+         "howToGet":"Unlocked at Level 4.",
+         "howToGetGold":"Unlocked at Level 43."
+      }
+   ],
+   "Credits":[
+      {
+         "id":"CRED_15",
+         "name":"Andy Brock",
+         "type":"Minion",
+         "rarity":"Legendary",
+         "cost":1,
+         "attack":1,
+         "health":3,
+         "text":"Can't be <b>Silenced. Divine Shield, Stealth.</b>",
+         "elite":true
+      }
+   ],
+   "Curse of Naxxramas":[
+      {
+         "id":"NAX1h_01",
+         "name":"Anub'Rekhan",
+         "type":"Hero",
+         "health":45
+      }
+   ],
+   "Debug":[
+      {
+         "id":"XXX_048",
+         "name":"-1 Durability",
+         "type":"Spell",
+         "rarity":"Common",
+         "cost":0,
+         "text":"Give a player's weapon -1 Durability."
+      }
+   ],
+   "Goblins vs Gnomes":[
+      {
+         "id":"GVG_029",
+         "name":"Ancestor's Call",
+         "type":"Spell",
+         "rarity":"Epic",
+         "cost":4,
+         "text":"Put a random minion from each player's hand into the battlefield.",
+         "flavor":"\"Hey! Ancestors!\" - Ancestor's call",
+         "artist":"Dan Scott",
+         "collectible":true,
+         "playerClass":"Shaman"
+      }
+   ],
+   "Missions":[
+      {
+         "id":"TU4c_006e",
+         "name":"Bananas",
+         "type":"Enchantment",
+         "text":"This minion has +1/+1. <i>(+1 Attack/+1 Health)</i>"
+      }
+   ],
+   "Reward":[
+      {
+         "id":"NEW1_016",
+         "name":"Captain's Parrot",
+         "type":"Minion",
+         "rarity":"Epic",
+         "cost":2,
+         "attack":1,
+         "health":1,
+         "text":"<b>Battlecry:</b> Put a random Pirate from your deck into your hand.",
+         "flavor":"Pirates and Parrots go together like Virmen and Carrots.",
+         "artist":"Daren Bader",
+         "collectible":true,
+         "race":"Beast",
+         "howToGet":"Unlocked when you have all the Pirates from the Expert Set.",
+         "howToGetGold":"Unlocked when you have all the Golden Pirates from the Expert Set.",
+         "mechanics":[
+            "Battlecry"
+         ]
+      },
+      {
+         "id":"EX1_062",
+         "name":"Old Murk-Eye",
+         "type":"Minion",
+         "faction":"Neutral",
+         "rarity":"Legendary",
+         "cost":4,
+         "attack":2,
+         "health":4,
+         "text":"<b>Charge</b>. Has +1 Attack for each other Murloc on the battlefield.",
+         "inPlayText":"Marglahg",
+         "flavor":"He's a legend among murlocs.  \"Mrghllghghllghg!\", they say.",
+         "artist":"Dan Scott",
+         "collectible":true,
+         "elite":true,
+         "race":"Murloc",
+         "howToGet":"Unlocked when you have all the Murlocs from the Expert Set.",
+         "howToGetGold":"Unlocked when you have all the Golden Murlocs from the Expert and Basic Sets.",
+         "mechanics":[
+            "Charge"
+         ]
+      }
+   ],
+   "System":[
+      {
+         "id":"PlaceholderCard",
+         "name":"Placeholder Card",
+         "type":"Minion",
+         "faction":"Neutral",
+         "rarity":"Epic",
+         "cost":9,
+         "attack":6,
+         "health":8,
+         "text":"Battlecry: Someone remembers to publish this card.",
+         "playerClass":"Mage"
+      }
+   ]
+}

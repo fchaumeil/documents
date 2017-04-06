@@ -1,0 +1,35 @@
+﻿@model Storm.InterviewTest.Hearthstone.Models.CardList
+<!--model IEnumerable<Storm.InterviewTest.Hearthstone.Core.Features.Cards.Models.CardModel>-->
+
+<div class="row" >
+    <div class="col-md-12">
+        <ul class="list-inline">
+            @if (Model.Cards != null)
+            {
+                foreach (var card in Model.Cards)
+                {
+                    <li class="list-group-item">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a>
+                                    <img class="img-responsive img-thumbnail" src="@card.ImageUrl" title="@card.PlayerClassText" alt="@card.Name" />
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                }
+            }
+        </ul>
+        <ul class="pagination" style="float: right;">
+            @for (int i = 1; i <= Model.PageCount; i++)
+            {
+                string currentPageClass = Model.PageNum == i ? "disabled" : "";
+                string currentPageStyle = Model.PageNum == i ? "color: #ffffff;background-color: #428bca;border-color: #428bca" : "";
+
+                <li class="@currentPageClass"> <a href="#" style="@currentPageStyle">@i</a></li>
+            }
+        </ul>
+    </div>
+</div>
+
