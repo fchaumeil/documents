@@ -17,10 +17,7 @@ namespace Storm.InterviewTest.Hearthstone.Controllers
             CardSearchService searchService = CardSearchService.DeckHeroSearchService(MvcApplication.CardCache);
             CardSearchModel CardSearch = new CardSearchModel();
             CardSearch.AllCards = searchService.SearchDeckHeroes("");
-            /*CardSearch.AllPlayerClasses = CardSearch.AllCards.Select(m => m.PlayerClassText).Distinct();
-            CardSearch.AllPlayerClasses = addBlank(CardSearch.AllPlayerClasses);*/
-            //CardSearch.AllPlayerClasses = CardSearch.AllCards.Select(m => m.Type).Distinct();
-            CardSearch.DisplayedCards = CardList.getPageItems(CardSearch, 1);
+            CardSearch.DisplayedCards = CardList.getPageItems(CardSearch, 1); 
             Session["model"] = CardSearch;
             return View(CardSearch);
 		}
@@ -55,7 +52,6 @@ namespace Storm.InterviewTest.Hearthstone.Controllers
             CardSearchService searchService = CardSearchService.AllowedDeckCardsFilterService(MvcApplication.CardCache, CardSearch.SelectedHero);
             CardSearch.AllCards = searchService.Search("");
             return PartialView("DeckCardList", DeckBuilder.getPageItems(CardSearch, 1));
-            //return PartialView("_ImageList", CardList.getPageItems(CardSearch, 1));
         }
 
         [HttpPost]

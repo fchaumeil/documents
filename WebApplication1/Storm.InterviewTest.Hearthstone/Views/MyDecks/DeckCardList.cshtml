@@ -24,11 +24,13 @@
                                 <span aria-hidden="true">+</span>
                             </div>   
                             <div style="display:inline-block" title="@card.Rarity" id="heroRarity">@card.Rarity</div>  
+                            <div style="display:none" id="heroID">@card.Id</div> 
+                            
                         </div>
                     </div>
                 </li>
-                    
                 }
+                @Html.HiddenFor(m => m.DeckCardsJSON);
             }
         </ul>
         <ul class="pagination" style="float: right;">
@@ -66,8 +68,10 @@
 
         $('.counter-up').click(function (e) {
             var $targetCard = $(e.target).closest(".list-group-item");
-            var $targetCardcnt = parseInt($targetCard.find('.output').val())
-            //alert($targetCard.find('#heroRarity').attr('title'));
+            var $targetCardcnt = parseInt($targetCard.find('.output').val());
+            var $targetCardId = $targetCard.find('#heroID').text();
+            var deckCardsList = JSON.parse($('#DeckCardsJSON').val());
+            alert(JSON.stringify(deckCardsList));
             if ($targetCardcnt < 2) {
                 var rarity = $targetCard.find('#heroRarity').attr('title');
                 if (rarity == 'Legendary' || rarity == 'Epic') {
@@ -85,12 +89,25 @@
                     $("#Remaining2select").text(30 - $nbrDeckCards - 1);
                 }
             }
+            alert(deckCardsList[$targetCardId])
+            if (deckCardsList[$targetCardId] == null) {
+                var deckCard = { key: $targetCardId, value: $("#DeckCardsCounter").text() };
+                deckCardsList.push(deckCard);
+            }
+            else
+                deckCardsList[$targetCardId]=
+                $('#DeckCardsJSON').val(JSON.stringify(deckCardsList));
+            alert(JSON.stringify(deckCardsList));
+            //$('#DeckCardsJSON').val()
+            //alert('hey');
         });
 
         $('.counter-down').click(function (e) {
             var $targetCard = $(e.target).closest(".list-group-item");
-            var $targetCardcnt = parseInt($targetCard.find('.output').val())
-            //alert($targetCard.find('#heroRarity').attr('title'));
+            var $targetCardcnt = parseInt($targetCard.find('.output').val());
+            var $targetCardId = $targetCard.find('#heroID').text();
+            alert(JSON.stringify($('#DeckCardsJSON')));
+            alert($targetCardId);
             if ($targetCardcnt > 0){ 
                 $targetCard.find('.output').val($targetCardcnt - 1);
                 var $nbrDeckCards = parseInt($("#DeckCardsCounter").text());
