@@ -1,0 +1,158 @@
+﻿
+@model Storm.InterviewTest.Hearthstone.Models.CardSearchModel
+@{//@model IEnumerable<Storm.InterviewTest.Hearthstone.Core.Features.Cards.Models.CardModel>
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Deck Builder</h1>
+    <p>Choose your Hero</p>
+    <div class="container" style="display: inline-block;">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Choose your Hero</button>
+        @using (Html.BeginForm("ChooseHero", "MyDecks", FormMethod.Post, new { @class = "form-inline", @id = "filterHero", role = "form" }))
+        {
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="heroFilter" data-toggle="dropdown">
+                                    filter by available type of Hero
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" id="pl">
+                                    <li><a href="#" style="height: 26px;"></a></li>
+                                    <li><a href="#" style="height: 26px;">Minion</a></li>
+                                    <li><a href="#" style="height: 26px;">Spell</a></li>
+                                    <li><a href="#" style="height: 26px;">Weapon</a></li>
+                                </ul>
+                            </div>
+                            <input class="form-control" type="search" name="q" id="q" value="" placeholder="search for Hero..." />
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                        <div class="modal-body" id="selectHeroContent">
+                            @{Html.RenderPartial("_ImageList", Model.DisplayedCards);}
+                            @Html.HiddenFor(m => m.SelectedHero)
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        }
+    </div>
+
+    <p>You Have choosen the following Hero</p>
+
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+            <a>
+                <img class="img-responsive img-thumbnail" id="deck_Hero" src="" />
+            </a>
+        </div>
+    </div>
+    <p>you can have the following cards in your deck (neutral card, i.e. PlayerClass=null, or class = <customtag id="selected_Hero_class"></customtag>) and of type <code>Minion</code>, <code>Spell</code>, <code>Weapon</code></p>
+    @{Html.HiddenFor(m => m.SelectedHero);}
+    <div class="container" id="deckBuilderWrapper" style="display: none">
+        <p>You have selected <customtag id="DeckCardsCounter">0</customtag> cards you must select <customtag id="Remaining2select">30</customtag> more</p>
+        <button type="button" class="btn btn-info btn-lg" id="DeckBuilder">Build your deck</button>
+        @using (Html.BeginForm("BuildDeck", "MyDecks", FormMethod.Post, new { @class = "form-inline", role = "form" }))
+        {
+            <div id="DeckBuilderCards" style="display: none;">
+                <p>if Epic or Legendary check if unique, else check if name/id count <=2</p>
+                @{
+            /*Storm.InterviewTest.Hearthstone.Models.DeckBuilder newDeckBUilder = new Storm.InterviewTest.Hearthstone.Models.DeckBuilder();
+            Html.RenderPartial("DeckCardList", newDeckBUilder);  */
+            Storm.InterviewTest.Hearthstone.Models.CardList newDeckBuilder = new Storm.InterviewTest.Hearthstone.Models.CardList();
+            Html.RenderPartial("_ImageList", newDeckBuilder);
+                }
+            </div>
+        }
+    </div>
+
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">Up for a challenge?</div>
+    <div class="panel-body">
+        <p>The deck builder is designed to allow users to create custom decks of cards</p>
+        <ul>
+            <li>A deck is created for one of the following heroes:
+                <code>Minion</code>, <code>Spell</code>, <code>Weapon</code>
+            </li>
+            <li>A deck can only contain neutral cards a neutral card has a null <code>PlayerClass</code>, or cards with a <code>PlayerClass</code> that matches that chosen hero for the deck.</li>
+            <li>A deck must be given a name, this is supplied by the user</li>
+            <li>A deck must contain exactly <strong>30</strong> cards</li>
+            <li>A deck can only contain cards of type <code>Minion</code>, <code>Spell</code>, <code>Weapon</code></li>
+            <li>A deck can contain to up 2 copies of the same card</li>
+            <li>Any specific card can only exist once per deck if it has a <code>Rarity</code> of <strong style="color: blueviolet">Epic</strong> or <strong style="color: coral">Legendary</strong>.</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $(document).on("click",".dropdown-menu li a",function () {
+            $str = $(this).text();
+            if ($str == '') {
+                $("#heroFilter").text('filter by available type of Hero');
+            }
+            else {
+                $("#heroFilter").text('Chosen hero Type: ' + $str);
+            }
+            $("#SelectedHero").val($str);
+
+            $.ajax({
+                url: "MyDecks/ChooseHero",
+                type: "POST",
+                data: $("form").serialize() ,//, //if you need to post just a few fields {fieldselector :'',....}
+                success: function (result) {
+                    $("#selectHeroContent").html(result);
+                }
+            });
+        });
+
+        $("#DeckBuilder").click(function () {
+            $("#DeckBuilderCards").slideToggle("slow", function () {
+                // Animation complete.
+                if ($("#DeckBuilderCards").is(":visible")) {
+                    $.ajax({
+                        url: "MyDecks/BuildDeck",
+                        type: "POST",
+                        data: $("form").serialize(),//, //if you need to post just a few fields {fieldselector :'',....}
+                        success: function (result) {
+                            $("#DeckBuilderCards").html(result);
+                        }
+                    });
+
+                }                
+            });
+        });
+        
+        $(document).on("click", "#filterHero .pagination li a", function () {
+            $.ajax({
+                url: "MyDecks/ImagesPage",
+                type: "POST",
+                data: { 'page': $(this).text() },//$("form").serialize(), //if you need to post Model data, use this
+                success: function (result) {
+                    $("#selectHeroContent").html(result);
+                }
+            });
+        });
+
+        $(document).on("click", "#filterHero .list-group-item", function () {
+            var stuf = $(this).find("img");
+            $('#deck_Hero').attr('src',stuf.attr('src')) ;
+            $('#selected_Hero_class').text(stuf.attr('title'));
+            $('#SelectedHero').val(stuf.attr('title'))
+            $('#deckBuilderWrapper').css('display','inline-block')
+        });
+        
+
+    });
+</script>

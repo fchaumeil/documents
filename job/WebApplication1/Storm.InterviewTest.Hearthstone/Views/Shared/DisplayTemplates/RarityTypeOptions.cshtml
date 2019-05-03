@@ -1,0 +1,47 @@
+﻿@using System.ComponentModel.DataAnnotations
+
+@{
+    string color="black";        
+    string rarityOptionType="";
+    string title = "";
+    var type = (Type)Model.GetType();
+    var field = type.GetField(Model.ToString());
+    if (field != null)
+    {
+        var display = ((DisplayAttribute[])field.GetCustomAttributes(typeof(DisplayAttribute), false)).FirstOrDefault();
+        
+        if (display != null)
+        {
+            rarityOptionType = @display.GetName();
+        }
+        else
+        {
+            rarityOptionType = @Model.Rarity.ToString();
+        }
+        title = rarityOptionType;
+        switch (rarityOptionType){            
+            case "Free":
+                color="silver";
+                break;
+            case "Common":
+                color = "slategray";
+                break;
+            case "Rare":
+                color = "blue";
+                break;
+            case "Epic":
+                color = "blueviolet";
+                break;
+            case "Legendary":
+                color = "coral";
+                title = Html.Encode( "Ohhhh shiny, shiny!");
+                break;
+            default:
+                color="black";                
+                break;
+        } 
+    }
+}
+
+<strong style="color: @color "><abbr title="@title">@rarityOptionType</abbr></strong>
+

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Storm.InterviewTest.Hearthstone.Core.Features.Cards.Models.CardModel>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Deck Builder</h1>
+    <p>Coming soon....maybe?</p>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">Up for a challenge?</div>
+    <div class="panel-body">
+        <p>The deck builder is designed to allow users to create custom decks of cards</p>
+        <ul>
+            <li>A deck is created for one of the following heroes:
+                <ul class="list-inline">
+                    @foreach (var hero in Model)
+                    {
+                        <li>@{ Html.RenderPartial("_Card", hero); }</li>
+                    }
+                </ul>
+            </li>
+            <li>A deck can only contain neutral cards a neutral card has a null <code>PlayerClass</code>, or cards with a <code>PlayerClass</code> that matches that chosen hero for the deck.</li>
+            <li>A deck must be given a name, this is supplied by the user</li>
+            <li>A deck must contain exactly <strong>30</strong> cards</li>
+            <li>A deck can only contain cards of type <code>Minion</code>, <code>Spell</code>, <code>Weapon</code></li>
+            <li>A deck can contain to up 2 copies of the same card</li>
+            <li>Any specific card can only exist once per deck if it has a <code>Rarity</code> of <strong style="color: blueviolet">Epic</strong> or <strong style="color: coral">Legendary</strong>.</li>
+        </ul>
+    </div>
+</div>

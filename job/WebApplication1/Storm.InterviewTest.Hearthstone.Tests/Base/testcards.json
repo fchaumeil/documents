@@ -1,0 +1,51 @@
+[
+    {
+        "id": "EX1_066",
+        "name": "Acidic Swamp Ooze",
+        "type": "Minion",
+        "faction": "Alliance",
+        "rarity": "Common",
+        "cost": 2,
+        "attack": 3,
+        "health": 2,
+        "text": "<b>Battlecry:</b> Destroy your opponent's weapon.",
+        "flavor": "Oozes love Flamenco.  Don't ask.",
+        "artist": "Chris Rahn",
+        "collectible": true,
+        "howToGetGold": "Unlocked at Rogue Level 57.",
+        "mechanics": [
+            "Battlecry"
+        ]
+    },
+    {
+        "id": "CS2_041",
+        "name": "Ancestral Healing",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 0,
+        "text": "Restore a minion to full Health and give it <b>Taunt</b>.",
+        "flavor": "I personally prefer some non-ancestral right-the-heck-now healing, but maybe that is just me.",
+        "artist": "Dan Scott",
+        "collectible": true,
+        "playerClass": "Shaman",
+        "howToGet": "Unlocked at Level 1.",
+        "howToGetGold": "Unlocked at Level 15."
+    },
+    {
+        "id": "CS2_106",
+        "name": "Fiery War Axe",
+        "type": "Weapon",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 2,
+        "attack": 3,
+        "durability": 2,
+        "flavor": "During times of tranquility and harmony, this weapon was called by its less popular name, Chilly Peace Axe.",
+        "artist": "Lucas Graciano",
+        "collectible": true,
+        "playerClass": "Warrior",
+        "howToGet": "Unlocked at Level 1.",
+        "howToGetGold": "Unlocked at Level 49."
+    }
+]

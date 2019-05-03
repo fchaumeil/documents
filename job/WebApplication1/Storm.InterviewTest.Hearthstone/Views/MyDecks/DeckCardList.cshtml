@@ -1,0 +1,100 @@
+﻿@model Storm.InterviewTest.Hearthstone.Models.DeckBuilder
+<!--model IEnumerable<Storm.InterviewTest.Hearthstone.Core.Features.Cards.Models.CardModel>-->
+
+<div id="DeckCardList" class="row">  
+
+    <p>if Epic or Legendary check if unique, else check if name/id count <=2</p>  
+    <div class="col-md-12">
+        <ul class="list-inline">
+                @if (Model.Cards != null)
+                {
+                foreach (var card in Model.Cards)
+                { 
+                <li class="list-group-item">
+
+                    <div class="row">
+                        <div class="col-md-12" style="text-align:center">
+                            <img class="img-responsive img-thumbnail" src="@card.ImageUrl" title="@card.ImageUrl" alt="@card.Name" />
+                            <br/>
+                            <div class="icon counter-down" aria-label="Previous" style="display:inline-block">
+                                <span aria-hidden="true">-</span>
+                            </div>
+                            <input style="width: 35px; display: inline-block; " disabled="disabled" type="text" class="output" value="0">
+                            <div class="icon counter-up" aria-label="Next" style="display:inline-block">
+                                <span aria-hidden="true">+</span>
+                            </div>   
+                            <div style="display:inline-block" title="@card.Rarity" id="heroRarity">@card.Rarity</div>  
+                        </div>
+                    </div>
+                </li>
+                    
+                }
+            }
+        </ul>
+        <ul class="pagination" style="float: right;">
+            @for (int i = 1; i <= Model.PageCount; i++)
+            {
+                string currentPageClass = Model.PageNum == i ? "disabled" : "";
+                string currentPageStyle = Model.PageNum == i ? "color: #ffffff;background-color: #428bca;border-color: #428bca" : "";
+
+                <li class="@currentPageClass"> <a href="#" style="@currentPageStyle">@i</a></li>
+            }
+        </ul>
+    </div>
+</div>
+
+<script>
+        
+        $(document).on("click", "DeckCardList .list-group-item", function () {
+            var stuf = $(this).find("img");
+            $('#deck_Hero').attr('src',stuf.attr('src')) ;
+            $('#selected_Hero_class').text(stuf.attr('title'));
+            $('#SelectedHero').val(stuf.attr('title'))
+        });
+        
+        $("#DeckCardList .pagination li a").click(function () {
+            $.ajax({
+                url: "MyDecks/CardsPage",
+                type: "POST",
+                data: { 'page': $(this).text() },//$("form").serialize(), //if you need to post Model data, use this
+                success: function (result) {
+                    $("#DeckCardList").html(result);
+                }
+            });
+        });
+
+
+        $('.counter-up').click(function (e) {
+            var $targetCard = $(e.target).closest(".list-group-item");
+            var $targetCardcnt = parseInt($targetCard.find('.output').val())
+            //alert($targetCard.find('#heroRarity').attr('title'));
+            if ($targetCardcnt < 2) {
+                var rarity = $targetCard.find('#heroRarity').attr('title');
+                if (rarity == 'Legendary' || rarity == 'Epic') {
+                    if ($targetCardcnt == 0) {
+                        $targetCard.find('.output').val($targetCardcnt + 1);
+                        var $nbrDeckCards = parseInt($("#DeckCardsCounter").text());
+                        $("#DeckCardsCounter").text($nbrDeckCards + 1);
+                        $("#Remaining2select").text(30 - $nbrDeckCards - 1);
+                    }
+                }
+                else {
+                    $targetCard.find('.output').val($targetCardcnt + 1);
+                    var $nbrDeckCards = parseInt($("#DeckCardsCounter").text());
+                    $("#DeckCardsCounter").text($nbrDeckCards + 1);
+                    $("#Remaining2select").text(30 - $nbrDeckCards - 1);
+                }
+            }
+        });
+
+        $('.counter-down').click(function (e) {
+            var $targetCard = $(e.target).closest(".list-group-item");
+            var $targetCardcnt = parseInt($targetCard.find('.output').val())
+            //alert($targetCard.find('#heroRarity').attr('title'));
+            if ($targetCardcnt > 0){ 
+                $targetCard.find('.output').val($targetCardcnt - 1);
+                var $nbrDeckCards = parseInt($("#DeckCardsCounter").text());
+                $("#DeckCardsCounter").text($nbrDeckCards - 1);
+                $("#Remaining2select").text(30 - $nbrDeckCards + 1);}
+        });
+</script>

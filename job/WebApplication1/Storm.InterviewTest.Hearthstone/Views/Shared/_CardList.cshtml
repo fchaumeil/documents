@@ -1,0 +1,36 @@
+﻿@model Storm.InterviewTest.Hearthstone.Models.CardList
+<!--model IEnumerable<Storm.InterviewTest.Hearthstone.Core.Features.Cards.Models.CardModel>-->
+
+<div id="ImageList" class="row">
+    <div class="col-md-12">
+        <ul class="list-inline">
+            @foreach (var card in Model.Cards)
+            {
+                <li class="list-group-item">
+                    @{Html.RenderPartial("_card", card);}
+                </li>
+            }
+        </ul>
+        <ul class="pagination" style="float: right;">
+            @for (int i = 1; i <= Model.PageCount; i++)
+            {
+                string currentPageClass = Model.PageNum == i ? "disabled" : "";
+                string currentPageStyle = Model.PageNum == i ? "color: #ffffff;background-color: #428bca;border-color: #428bca" : "";
+
+                <li class="@currentPageClass" > <a href="#" style="@currentPageStyle">@i</a></li>
+            }
+        </ul>
+    </div>
+</div>
+<script>
+    $(".pagination li a").click(function () {
+        $.ajax({
+            url: "Cards/CardsPage",
+            type: "POST",
+            data: { 'page': $(this).text() },//$("form").serialize(), //if you need to post Model data, use this
+            success: function (result) {
+                $("#ImageList").html(result);
+            }
+        });
+    })
+</script>

@@ -1,0 +1,10 @@
+﻿@model Storm.InterviewTest.Hearthstone.Core.Features.Cards.Models.CardModel
+
+<div class="row">
+    <div class="col-md-12">
+        <a href="@Url.Action("Details", "Card", new { id = Model.Id })"><img class="img-responsive img-thumbnail" src="@Model.ImageUrl" alt="@Model.Name" title="@Model.Name" /></a>        
+    </div>
+    <div class="col-md-12 text-center">
+        <span class="label label-default">@Model.PlayerClassText</span>
+    </div>
+</div>
